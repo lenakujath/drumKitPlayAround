@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -59,12 +58,11 @@
 
 <script>
   window.addEventListener('keydown', function (e){
-      //console.log(e.keyCode);
       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-      if (!audio) return; //stop function 
+      //stop function 
+      if (!audio) return; 
       audio.currentTime = 0;
-      audio.play();
-      
+      audio.play();   
   });
 </script>
 
